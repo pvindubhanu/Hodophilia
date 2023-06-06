@@ -1,0 +1,56 @@
+/* || Google Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Kanit:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Nunito:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Overpass:ital,wght@0,400;0,500;1,400;1,500&family=Rubik:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap');
+/* 
+CSS rules to specify families
+
+font-family: 'Dancing Script',
+cursive;
+
+font-family: 'Kanit',
+sans-serif;
+
+font-family: 'Montserrat',
+sans-serif;
+
+font-family: 'Nunito',
+sans-serif;
+
+font-family: 'Overpass',
+sans-serif;
+
+font-family: 'Rubik',
+sans-serif;
+*/
+
+
+/* || Colors */
+:root {
+    /* Feel free to change these, but please don't stray too far */
+    /* Please use CSS filter() if you need to deviate from the palette */
+    --mainColor1: 224, 50%, 60%; /* hsl(224, 50%, 60%); */
+    --mainColor2: 224, 65%, 36%; /* hsl(224, 65%, 36%); */
+    --mainColor3: 192, 100%, 81%; /* hsl(192, 100%, 81%); */
+    --mainColor4: 0, 100%, 100%; /* hsl(20, 100%, 93%); */
+    --mainColor5: 11, 50%, 60%; /* hsl(11, 50%, 60%); */
+}
+
+body,
+html {
+    /*background-color: hsla(var(--mainColor4), 1);*/
+    color: hsla(var(--mainColor2), 1);
+    font-family: 'Rubik', 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    /* We'll set non-header text first */
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kanit', 'Overpass', Verdana, Geneva, Tahoma, sans-serif;
+    /* Kanit + Overpass in part because I don't know which to choose */
+    font-weight: 600;
+}

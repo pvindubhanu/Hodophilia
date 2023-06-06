@@ -1,0 +1,63 @@
+.loginButtonWrapper {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 12vh;
+    margin: .5rem .25rem 1rem;
+    padding: 1.7em;
+    background-color: hsla(var(--mainColor1), 1);
+}
+
+.loginButtonWrapper button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 4px solid hsla(var(--mainColor2), 1);
+    padding: 2rem 5rem;
+    cursor: pointer;
+
+    background-color: hsla(var(--mainColor4), 1);
+    background-image: linear-gradient(135deg, transparent 47%, hsla(var(--mainColor3), 1) 50%);
+    background-size: 250% 250%;
+
+    animation: buttonHover-out .5s;
+}
+
+.loginButtonWrapper button:hover {
+    animation: buttonHover-in .5s both;
+}
+
+@keyframes buttonHover-in {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 100%;
+    }
+}
+
+@keyframes buttonHover-out {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+.loginButtonWrapper button table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.loginButtonWrapper button table tr td.image {
+    height: 100%;
+    width: 8%;
+}
+
+.loginButtonWrapper button table tr td.image img {
+    width: 100%;
+}

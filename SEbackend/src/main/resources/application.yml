@@ -1,0 +1,79 @@
+spring:
+ datasource:
+#         url: "jdbc:postgresql://ec2-3-214-2-141.compute-1.amazonaws.com/d46388963g3qdg"
+#         driverClassName: org.postgresql.Driver
+#         username: tgbydnxhvydtlf
+#         password: 2a835daddb191d7577ff31bc6b51d38da8ea2072058e7fb37a45b3c0fe8f51b7
+         url: "jdbc:postgresql://localhost/hodophiliadb"
+         driverClassName: org.postgresql.Driver
+         username: postgres
+         password: postgres
+ jpa:      
+           database: POSTGRESQL
+           show-sql: false
+           hibernate.ddl-auto: update
+           properties:
+             hibernate:
+               jdbc:
+                 lob:
+                   non_contextual_creation: true
+               dialect: org.hibernate.dialect.PostgreSQLDialect
+ 
+ mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: akshaybharadwaj003@gmail.com
+    password: hayyggmihizjxlnd
+    port: 587
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+ management:
+   tracing:
+     sampling:
+       probability: 1.0
+
+ logging:
+  pattern:
+   level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+ 
+ security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 253434983541-pcoqhs7d8l05r176fod88imfljmsrlhk.apps.googleusercontent.com
+            client-secret: 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
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+                - email
+                - profile
+
+  
+app:
+    auth:
+      tokenSecret: hodophiliaSecretKey
+      tokenExpirationMsec: 86400000
+    cors:
+      allowedOrigins: http://localhost:3000,http://localhost:8080
+    oauth2:
+       authorizedRedirectUris:
+        - http://localhost:3000/login
+        - http://localhost:3000/oauth2/redirect
+        
+
+
+
+
+
+
+        
+ 
+
+ 
+      

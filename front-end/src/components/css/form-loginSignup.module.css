@@ -1,0 +1,111 @@
+.login-signup {
+    border: hsla(var(--mainColor1), 1) solid 3px;
+    background-color: hsla(var(--mainColor1), .35);
+    /* margin: 2rem 0; */
+    width: 100%;
+    padding: .75rem .5rem;
+}
+
+.login-signup h1,
+.login-signup h2,
+.login-signup h3,
+.login-signup h4,
+.login-signup h5,
+.login-signup h6 {
+    text-shadow: hsla(var(--mainColor3), 1) 1px 1px;
+}
+
+.login-signup>label {
+    display: block;
+    margin: .5rem 3rem 1rem;
+    padding: 1rem 5rem;
+    align-items: left;
+    text-align: center;
+    background-color: hsla(var(--mainColor1), 1);
+    color: hsla(var(--mainColor3), 1);
+    text-shadow: hsla(var(--mainColor2), 1) 1px 1px;
+    border: hsla(var(--mainColor2), 1) solid 6px;
+}
+
+.login-signup label input:focus {
+    outline: none;
+}
+
+.login-signup label input {
+    text-align: center;
+    margin-top: .8em;
+    padding: .3em 0;
+    background-color: transparent;
+    border: none;
+    color: hsla(var(--mainColor4), 1);
+    border-bottom: hsla(var(--mainColor2), 1) 2px solid;
+}
+
+.login-signup label input:not([type='checkbox']) {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-signup label input::placeholder {
+    color: hsla(var(--mainColor3), 1);
+    text-align: center;
+    font-style: italic;
+}
+
+.login-signup label input[type='checkbox'] {
+    margin: 1em;
+}
+
+.login-signup button, .login-signup input[type='submit'], .formButton {
+    border: hsla(var(--mainColor2), 1) 3px solid;
+    background-color: hsla(var(--mainColor1), 1);
+    color:hsla(var(--mainColor3), 1);
+    text-shadow: hsla(var(--mainColor2), 1) 1px 1px;
+    padding: 1em 2em;
+    margin: .2em .8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-signup button:hover, .login-signup input[type='submit']:hover, .formButton:hover {
+    transform: scale(1, 1);
+    animation: 
+        buttonHoverPersist .5s ease 0s infinite,
+        buttonHover .25s ease 0s forwards;
+}
+
+@keyframes buttonHover {
+    0% {
+        
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@keyframes buttonHoverPersist {
+    0% {
+        
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+/* TODO: Finish these styles */
+.login-signup label input:valid {
+
+}
+
+.login-signup label input:invalid {
+
+}
+
+.errorMsg {
+    color: red;
+}

@@ -1,0 +1,183 @@
+.homepage-search {
+    position: relative;
+    width: 100%;
+    --shrinkWidth: 2%;
+}
+
+.homepage-search-bar {
+    width: 100%;
+    box-sizing: border-box;
+    /* padding: 2rem var(--shrinkWidth); */
+    padding-bottom: 0;
+}
+
+.homepage-search-bar .homepage-search-bar-flex {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em .5em;
+    border: hsla(var(--mainColor2), 1) solid 4px;
+    border-radius: 1rem;
+    background-color: hsla(var(--mainColor1), .5);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    /* gap: 2em; */
+}
+
+.homepage-search-bar .homepage-search-bar-flex > * {
+    flex-grow: 1;
+}
+
+.homepage-search-bar .homepage-search-bar-flex input {
+    color: hsla(var(--mainColor2), 1);
+    flex-grow: 4;
+    /* font-size: 2em; */
+    background-color: #0000;
+    border: none;
+}
+
+.homepage-search-bar .homepage-search-bar-flex input:focus {
+    outline: none;
+}
+
+.homepage-search-bar-flex > *:nth-child(1) {
+    flex: 1;
+}
+
+.homepage-search-bar-flex > input:nth-child(2) {
+    width: 100%;
+    flex: 8;
+}
+
+.homepage-search-bar .homepage-search-bar-flex a, .homepage-search-bar .homepage-search-bar-flex button {
+    text-decoration: none;
+    color: hsla(var(--mainColor2), 1);
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.searchResults {
+
+    --sR-Border: hsla(var(--mainColor2), 1) solid 3px;
+
+    list-style: none;
+    background-color: hsla(var(--mainColor1), 1);
+    margin: 0 calc(var(--shrinkWidth) + 2vw);
+    padding: 0 1.25em;
+    overflow: hidden;
+    border: var(--sR-Border);
+    border-top: none;
+    border-bottom: none;
+    max-height: 100%;
+}
+
+.searchResults:last-child {
+    border-bottom: var(--sR-Border);
+    border-radius: 0 0 1em 1em;
+}
+
+.searchResults li {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchResults li .info {
+    margin: .2em 0;
+    padding: .4em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: hsla(var(--mainColor3), .6) solid 2px;
+}
+
+.searchResults li:last-child .info {
+    border-bottom: none !important;
+}
+
+.searchResults li button,
+.searchResults li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    background-color: transparent;
+    border-style: none;
+    text-decoration: none;
+    font-weight: inherit;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.searchResults li button:first-child,
+.searchResults li a:first-child {
+    margin-top: 0;
+}
+
+.searchResults li, .searchResults li button,
+.searchResults li, .searchResults li a {
+    width: 100%;
+    /* color: hsla(var(--mainColor2), 1) */
+    color: white;
+}
+
+.searchResults li > button > *,
+.searchResults li > a > * {
+    display: inline-block;
+}
+
+.searchResults .imgContainer {
+
+    --size: 4em;
+
+    height: var(--size);
+    width: var(--size);
+    flex-shrink: 0;
+    border: hsla(var(--mainColor3), 1) solid 4px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    /* margin: 0 1em .5em 0; */
+}
+
+.searchResults .imgContainer > img {
+    /* TODO: make the image positioning more consistent for different sizes */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* right: -50%; */
+}
+
+.searchResults .textContainer {
+    padding: .5em 0;
+    margin: 0 1em;
+    width: 100%;
+}
+
+.searchResults li:last-child .textContainer {
+    border-bottom: none;
+}
+
+.searchResults .textContainer > * {
+    display: block;
+    padding-bottom: .4em;
+    /* line-break: anywhere; */
+}
+
+.searchResults .textContainer > *:last-child {
+    padding-bottom: 0;
+}
+
+.searchResults .textContainer .textContainer-location {
+    color: hsla(var(--mainColor3), 1);
+    font-size: .9em;
+    font-style: italic;
+}
+

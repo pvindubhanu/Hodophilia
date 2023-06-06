@@ -1,0 +1,79 @@
+.addLocation {
+    margin: 2em 4em;
+    padding: 1em;
+    --background-color: hsla(var(--mainColor3), 80%);
+    background-color: #000;
+    background-image: linear-gradient( var(--background-color), var(--background-color));
+    border: hsl(var(--mainColor2)) solid 6px;
+    width: 69%;
+}
+
+.addLocation h2, 
+.addLocation h3, 
+.addLocation h4, 
+.addLocation h5, 
+.addLocation h6 {
+    margin: 0;
+    text-align: left;
+}
+
+.locationHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em .5em 1em;
+}
+
+.locationHeader > * {
+    display: inline-block;
+}
+
+.map {
+    background-color: white;
+    color: red;
+    margin: .2em auto;
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flights {
+    margin-top: 1em;
+}
+
+.flightsSearch {
+    margin: 1em 5%;
+    border: hsl(var(--mainColor3)) solid 2px;
+}
+
+.flightsSearch .flightsSearchInterior {
+    margin: .25em;
+    padding: 1em;
+    background-color: hsl(var(--mainColor4));
+}
+
+.flightsSearchRow {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.results {
+    background-color: hsl(var(--mainColor3));
+    list-style:none;
+    border: hsl(var(--mainColor2)) solid 4px;
+    border-radius: 1em;
+    padding: 0 3em;
+}
+
+.results li {
+    padding: .75em .25em;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.selectedFlight {
+    
+}

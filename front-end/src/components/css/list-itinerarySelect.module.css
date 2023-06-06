@@ -1,0 +1,101 @@
+.itinerarySection {
+    background-color: hsl(var(--mainColor2));
+    border: hsl(var(--mainColor1)) solid 4px;
+    color: hsl(var(--mainColor4));
+    margin: 1em 0;
+}
+
+.itinerarySection.itinerarySelect {
+    padding: 1em 5%;
+}
+
+.itinerarySection ul {
+    padding: 0;
+}
+
+.itinerarySection.itineraryDetails ul {
+    margin: 1em 0 2em;
+    padding: 0;
+    --border: 3px solid hsla(var(--mainColor1), 1);
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+.itinerarySection.itineraryDetails ul li {
+    padding: .5em 5%;
+    border-bottom: 1px dashed hsla(var(--mainColor1), .8);
+}
+
+.itinerarySection li {
+    padding: 0 .5em;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.itinerarySection.itinerarySelect li {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.itinerarySection.itineraryDetails li {
+    grid-template-columns: 3fr repeat(2, 1fr);
+}
+
+/* .itinerarySection.itineraryDetails ul li>:first-child {
+    width:3fr;
+} */
+
+.itinerarySection li :first-child {
+    text-align: left;
+}
+
+.itinerarySection button.icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: .25em;
+    color: hsl(var(--mainColor3));
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.toolTip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.itinerarySection button.icon[alt]::after, .toolTip[alt]::after {
+    content: attr(alt);
+    position: absolute;
+    top: -60%;
+    right: 100%;
+    font-size: small;
+    background-color: hsl(var(--mainColor1));
+    border: 2px solid hsl(var(--mainColor4));
+    padding: 1em;
+    opacity: 0;
+    transition: opacity .1s ease 1s;
+}
+
+.itinerarySection button.icon[alt]:hover::after, .toolTip[alt]:hover::after {
+    opacity: 100%;
+}
+
+.itinerarySection li.active {
+    background-color: hsl(var(--mainColor3));
+    color: hsl(var(--mainColor2));
+}
+
+.itinerarySection li.active button.icon {
+    color: inherit;
+    cursor: default;
+}
+
+.itinerarySection .input {
+    color: hsl(var(--mainColor2));
+    background-color: hsl(var(--mainColor4));
+}

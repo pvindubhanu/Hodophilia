@@ -1,0 +1,107 @@
+.nav {
+    background-color: hsla(var(--mainColor2), 1);
+    color: hsla(var(--mainColor4), 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    z-index: 999;
+}
+
+.nav-logout {
+    background-color: hsla(var(--mainColor2), 1);
+    border: 2px solid hsla(var(--mainColor1), 1);
+    padding: .6em;
+    cursor: pointer;
+}
+
+.nav-logout:hover {
+    background-color: hsla(var(--mainColor4), 1);
+    color: hsla(var(--mainColor2), 1);
+}
+
+.nav * {
+    color: hsla(var(--mainColor4), 1);
+    margin: 0;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: .15rem;
+    list-style: none;
+}
+
+.nav ul li button,
+.nav ul li a {
+    text-decoration: none;
+    padding: .75rem 1.1rem;
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    font-weight: inherit;
+}
+
+.nav ul li button:hover,
+.nav ul li a:hover {
+    background-color: hsla(var(--mainColor5), 1);
+}
+
+.userPageLink {
+    background-color: transparent;
+    border-style: none;
+    display: flex;
+    column-gap: 5%;
+    /* gap: 2em; */
+    align-items: center;
+    font-size: inherit;
+    font-weight: inherit;
+    /* width: fit-content; */
+    cursor: pointer;
+}
+
+.nav .nameDetails {
+    width: 100%;
+    position: relative;
+    margin: 0 1em;
+}
+
+.nav .nameDetails .nav-username {
+    position: relative;
+    padding: .4em 0 .4em 1em;
+    background-color: hsla(var(--mainColor2));
+    border-radius: 5px 0 0 20px;
+    z-index: 2;
+    text-align: end;
+}
+
+.nav .nameDetails .nameImage {
+    position: absolute;
+    top:0;
+    right: 94%;
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.nav .nameDetails .nav-itinerary {
+    font-style: italic;
+    color: hsla(var(--mainColor3), 1);
+    text-align: end;
+}
+
+/* .userPageLink p {
+    display: inline-block;
+} */
+
+.userPageLink img {
+    width: 11%;
+}

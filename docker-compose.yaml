@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  backend:
+    image: indubhanu/container-image-01-backend:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    networks:
+      - backend-network
+
+networks:
+  backend-network:

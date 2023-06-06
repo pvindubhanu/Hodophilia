@@ -1,0 +1,9 @@
+#pageWrapper {
+    margin: 0 3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#pageWrapper>* {
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+.column-items > * {
+    margin: 10% 0;
+    padding: 5% 1% !important;
+    border-radius: 10%;
+    background-color: white;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.column-items > *:not(:first-child) {
+    background-color: rgb(11,70,181);
+    color: white;
+}

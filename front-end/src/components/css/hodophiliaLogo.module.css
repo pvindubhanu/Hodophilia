@@ -1,0 +1,13 @@
+.home-anchor, .home-anchor:hover, .home-anchor:active, .home-anchor:visited {
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: hsla(var(--mainColor2), 1);
+}
+
+.hodophilia-logo {
+    font-family: 'Dancing Script';
+    font-weight: 600;
+    font-size: 3em;
+}

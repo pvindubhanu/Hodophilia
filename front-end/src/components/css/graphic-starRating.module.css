@@ -1,0 +1,15 @@
+.starRating {
+
+    --sizeMultiplier: .7;
+
+    mask: url('../../assets/icons/stars.svg') no-repeat;
+    mask-size: contain;
+    background-image: linear-gradient(90deg, hsla(var(--mainColor5), 1) 50%, transparent 50%);
+    width: calc(285.06px * var(--sizeMultiplier));
+    height: calc(54.27px * var(--sizeMultiplier));
+    background-size: 200%;
+    margin: .5em;
+    /* background-position-x: 100%; */
+
+    transition: background-position ease-in 1s;
+}
